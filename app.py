@@ -28,7 +28,7 @@ print(os.environ['APP_SETTINGS'])
 
 @app.route('/')
 def hello():
-    #return "Hello World!!!!"
+    
     return render_template('index.html')
 
 

@@ -63,7 +63,7 @@ def index():
 
     if request.method == "POST":
         # get name that the user has entered
-        name = (request.form['name']).upper()
+        name = (request.form['name']).lower()
                     
         db.execute("INSERT INTO names (name, user_id) VALUES (:name, :user_id)",
             {"name": name, "user_id": user_id})
@@ -77,7 +77,15 @@ def index():
             
     return render_template('index.html', errors=errors, names=names)
        
-            
+@app.route('/<str:name>', methods=['GET', 'POST'])
+def search():   
+    name = (request.form['name']).lower()
+    # list of links to stick name into
+    
+    return render_template('search.html', errors=errors, name=name)
+    
+
+
 
 if __name__ == '__main__':
     app.run()

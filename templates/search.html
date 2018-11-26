@@ -50,6 +50,7 @@
             float: right;
         }
 
+
         li a {
             display: block;
             color: white;
@@ -124,10 +125,11 @@
         <h2>Baby Name Suggestions</h2>
     </header>
     <nav>
-        <ul>
+        <ul>            
             <li><a href="#">Logout</a></li>
             <li><a href="#">Register</a></li>
             <li><a href="#">Login</a></li>
+            <li><a href="http://heathersbabyname.herokuapp.com/">Home</a></li>
         </ul>
     </nav>
     <div class="section">
@@ -141,11 +143,11 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>?</th>
+                            <th>link#</th>
                         </tr>
                     </thead>
                     <tr>
-                        <td><a href="https://en.wikipedia.org/wiki/{{ name }}">{{ name }}</a></td>
+                        <td><a href="https://en.wikipedia.org/wiki/{{ sname }}">{{ name }}</a></td>
                         <td>{{ 1 }}</td>
                     </tr>
                     <tr>

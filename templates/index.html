@@ -147,12 +147,14 @@
                     <thead>
                         <tr>
                             <th>Count</th>
+                            <th></th>
                             <th>Name</th>
                         </tr>
                     </thead>
                     {% for name in names%}
                     <tr>
                         <td>{{ name[1] }}</td>
+                        <td> ---> </td>
                         <td><a href="http://www.babynamewizard.com/baby-name/girl/{{ name[0] }}">{{ name[0] }}</a></td>
                     </tr>
                     {% endfor %}

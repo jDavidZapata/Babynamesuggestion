@@ -76,7 +76,7 @@ def index():
         return redirect(url_for('index', errors=errors, names=names))
             
     return render_template('index.html', errors=errors, names=names)
-        #return "hello"
+       
             
 
 if __name__ == '__main__':

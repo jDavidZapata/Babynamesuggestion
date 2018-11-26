@@ -77,10 +77,14 @@ def index():
             
     return render_template('index.html', errors=errors, names=names)
        
-@app.route('/<str:name>', methods=['GET', 'POST'])
-def search():   
-    name = (request.form['name']).lower()
-    # list of links to stick name into
+@app.route('/<name>', methods=['GET', 'POST'])
+def search(name):
+    errors = []
+    
+    if request.method == "POST":
+        name = (request.form['name']).lower()
+        # list of links to stick name into
+        print(name)
     
     return render_template('search.html', errors=errors, name=name)
     

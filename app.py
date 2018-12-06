@@ -63,7 +63,7 @@ def index():
 
     if request.method == "POST":
         # get name that the user has entered
-        name = (request.form['name']).lower()
+        name = (request.form['name']).capitalize()
                     
         db.execute("INSERT INTO names (name, user_id) VALUES (:name, :user_id)",
             {"name": name, "user_id": user_id})

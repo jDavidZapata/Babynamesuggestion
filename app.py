@@ -41,7 +41,7 @@ db.commit()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    errors = []
+    error = []
     names = {}
     names = db.execute(    
             'SELECT name, count(*) FROM names GROUP BY name ORDER BY count(*) DESC'
@@ -50,17 +50,7 @@ def index():
 
     user_id = 1
 
-    '''
-    user_id = session.get('user_id')
-        
-    if ('user_id' in session):
-
-        g.user = db.execute(    
-            'SELECT * FROM users WHERE id = :id', {"id": user_id,}
-        ).fetchone()
-        #return render_template("index.html")
-    '''
-
+     
     if request.method == "POST":
         # get name that the user has entered
         name = (request.form['name']).capitalize()
@@ -72,21 +62,23 @@ def index():
         """Store the user id in a new session and return to the index"""
 
         names = db.execute('SELECT name FROM names').fetchall()
+
+    
                     
-        return redirect(url_for('index', errors=errors, names=names))
+        return redirect(url_for('index', error=error, names=names))
             
-    return render_template('index.html', errors=errors, names=names)
+    return render_template('index.html', error=error, names=names)
        
 @app.route('/<name>', methods=['GET', 'POST'])
 def search(name):
-    errors = []
+    error = []
     
     if request.method == "POST":
         name = (request.form['name']).capitalize()
         # list of links to stick name into
         print(name)
     
-    return render_template('search.html', errors=errors, name=name)
+    return render_template('search.html', error=error, name=name)
     
 
 

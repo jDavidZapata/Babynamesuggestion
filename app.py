@@ -82,7 +82,7 @@ def search(name):
     errors = []
     
     if request.method == "POST":
-        name = (request.form['name']).lower()
+        name = (request.form['name']).capitalize()
         # list of links to stick name into
         print(name)
     

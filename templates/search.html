@@ -61,6 +61,17 @@
 
         li a:hover {
             background-color: #111;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: violet;
+        }
+
+        a {
+            color: violet;
         }
         
         /*.nav:after {
@@ -110,12 +121,7 @@
             }
         }
 
-        /*
-        .container {
-        max-width: 1000px;
-        }
-        */
-
+  
     </style>
 </head>
 
@@ -129,51 +135,51 @@
             <li><a href="#">Logout</a></li>
             <li><a href="#">Register</a></li>
             <li><a href="#">Login</a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
         </ul>
     </nav>
     <div class="section">
 
         <div class="left">
 
-            <h2>Name Suggestions</h2>
+            <h2>Search Results</h2>
             <br>
             <div id="names">
                 <table class="table table-striped" style="max-width: 300px;">
                     <thead>
                         <tr>
-                            <th>Site</th>
+                            <th>Web Site</th>
                             <th></th>
                             <th></th>
                             <th>Link To</th>
                         </tr>
                     </thead>
                     <tr>
-                        <td><a href="https://en.wikipedia.org"> 1 Wikipedia </a></td>
+                        <td><a href="https://en.wikipedia.org"> Wikipedia </a></td>
                         <td>>----</td>
                         <td>----></td>
                         <td><a href="https://en.wikipedia.org/wiki/{{ name }}">{{ name }}</a></td>
                     </tr>
                     <tr>
-                        <td><a href="http://www.babynamewizard.com"> 2 Babynamewizard </a></td>
+                        <td><a href="http://www.babynamewizard.com"> Babynamewizard </a></td>
                         <td>>----</td>
                         <td>----></td>
                         <td><a href="http://www.babynamewizard.com/baby-name/girl/{{ name}}">{{ name }}</a></td>
                     </tr>
                     <tr>
-                        <td><a href="https://www.pregnology.com"> 3 Pregnology </a></td>
+                        <td><a href="https://www.pregnology.com"> Pregnology </a></td>
                         <td>>----</td>
                         <td>----></td>
                         <td><a href="https://www.pregnology.com/names/girls/{{ name }}">{{ name }}</a></td>
                     </tr>
                     <tr>
-                        <td><a href="https://www.names.org"> 4 Names </a></td>
+                        <td><a href="https://www.names.org"> Names </a></td>
                         <td>>----</td>
                         <td>----></td>
                         <td><a href="https://www.names.org/n/{{ name }}/about">{{ name }}</a></td>
                     </tr>
                     <tr>
-                        <td><a href="https://www.urbandictionary.com"> 5 Urbandictionary </a></td>
+                        <td><a href="https://www.urbandictionary.com"> Urbandictionary </a></td>
                         <td>>----</td>
                         <td>----></td>
                         <td><a href="https://www.urbandictionary.com/define.php?term={{ name }}">{{ name }}</a></td>
@@ -186,7 +192,9 @@
         </div>
 
         <div class="right">
-
+            <h3>* Looking For A Name?</h3>
+            <h3>Search For One...</h3>
+            <br>
             <form role="form" method='POST' action="/search">
                 <div class="form-group">
                     <input type="text" name="name" class="form-control" id="url-box" placeholder="Search For Name..." style="max-width: 300px;"

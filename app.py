@@ -44,7 +44,7 @@ def index():
     errors = []
     names = {}
     names = db.execute(    
-            'SELECT name FROM names'
+            'SELECT name, count(*) FROM names GROUP BY name ORDER BY count(*) DESC'
         ).fetchall()
     print(names)
 

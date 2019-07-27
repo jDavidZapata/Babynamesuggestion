@@ -24,6 +24,7 @@ Project is created with:
 * Bootstrap 4 
 * HTML
 * CSS
+* Postgresql
 * Plus other libaries, for full list check out the requirements.txt: https://github.com/jDavidZapata/Babynamesuggestion/blob/master/requirements.txt
 
 ## Setup and Launch

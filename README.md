@@ -25,6 +25,7 @@ Project is created with:
 * HTML
 * CSS
 * PostgreSQL
+* Heroku
 * Plus other libaries, for full list check out the requirements.txt: https://github.com/jDavidZapata/Babynamesuggestion/blob/master/requirements.txt
 
 ## Setup and Launch

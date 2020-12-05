@@ -9,7 +9,7 @@ Web Application for Suggesting names.
 * [Sources](#sources)
 
 ## General info
-This project is a Web Applications witch lets users search for and suggest names.  Suugestions are saved in a database and the meaning of the name can be searched in 5 different web sites.
+This project is a Web Applications witch lets users search for and suggest names.  Suggestions are saved in a database and the meaning of the name can be searched in 5 different web sites.
 
 	
 ## Technologies
@@ -24,7 +24,7 @@ Project is created with:
 * Bootstrap 4 
 * HTML
 * CSS
-* Postgresql
+* PostgreSQL
 * Plus other libaries, for full list check out the requirements.txt: https://github.com/jDavidZapata/Babynamesuggestion/blob/master/requirements.txt
 
 ## Setup and Launch
@@ -36,4 +36,4 @@ Project is created with:
 
 
 ## Sources
-This project was inspire by my new dauther needing a name.
+This project was my first personal project inspire by my new daughter needing a name.

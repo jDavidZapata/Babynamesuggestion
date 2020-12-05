@@ -1,5 +1,5 @@
 # Baby Name Suggestion Application  
-Web Application for Suggesting names.
+Flask Web Application for Suggesting names.
 
 ## Table of contents
 * [General info](#general-info)
@@ -9,7 +9,7 @@ Web Application for Suggesting names.
 * [Sources](#sources)
 
 ## General info
-This project is a Web Applications witch lets users search for and suggest names.  Suggestions are saved in a database and the meaning of the name can be searched in 5 different web sites.
+This project is a Flask Web Applications witch lets users search for and suggest names.  The suggestions are saved in a database and the meaning of the name can be searched in 5 different web sites.
 
 	
 ## Technologies
